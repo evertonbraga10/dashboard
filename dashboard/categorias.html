@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
@@ -68,12 +69,28 @@
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Cachaças</td>
+                        <td>Ativo</td>
+                        <td>
+                            <div class="acoes">
+                                <ion-icon name="create"></ion-icon>
+                                <ion-icon name="trash"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        let table = new DataTable('#table');
+    </script>
 </body>
 </html>
