@@ -141,3 +141,84 @@ main{
 main.active{
     width: calc(100% - 85px);
 }
+
+main h2{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+main h2 .titulo{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+main h2 ion-icon{
+    position: relative;
+    contain: initial;
+}
+
+main h2 ion-icon::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #00000000;
+    transition-duration: 200ms;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+main h2 ion-icon:hover::after{
+    width: 50px;
+    height: 50px;
+    background-color: #00000030;
+}
+
+main h2 button{
+    line-height: 50px;
+    background-color: #1e96fc;
+    color: #021729;
+    border-radius: 5px;
+    padding: 0 26px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+main h2 button::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #103c62;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 200ms;
+}
+
+main h2 button:hover::after{
+    width: 100%;
+}
+
+main h2 button span{
+    position: relative;
+    z-index: 1;
+    transition-duration: 200ms;
+}
+
+main h2 button:hover span{
+    color: #FFFFFF;
+}
+
+main .box{
+    background-color: #FFFFFF;
+    padding: 26px;
+    border-radius: 5px;
+    margin-top: 50px;
+}

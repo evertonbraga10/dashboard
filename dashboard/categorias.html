@@ -40,7 +40,37 @@
     </header>
 
     <main>
-        <h2>Categorias</h2>
+        <h2>
+            <div class="titulo">
+                <ion-icon class="menu-btn" name="menu"></ion-icon>Categorias
+            </div>
+            <button><span>Nova Categoria</span></button>
+        </h2>
+        <div class="box">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Categoria</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Vodkas</td>
+                        <td>Ativo</td>
+                        <td>
+                            <div class="acoes">
+                                <ion-icon name="create"></ion-icon>
+                                <ion-icon name="trash"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
