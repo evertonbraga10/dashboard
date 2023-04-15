@@ -144,8 +144,8 @@ main.active{
 
 main h2{
     display: flex;
-   justify-content: space-between;
-   align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main h2 .titulo{
@@ -161,8 +161,8 @@ main h2 ion-icon{
 
 main h2 ion-icon::after{
     content: "";
-    width: 50px;
-    height: 50px;
+    width: 0;
+    height: 0;
     background-color: #00000000;
     transition-duration: 200ms;
     border-radius: 25px;
@@ -172,7 +172,6 @@ main h2 ion-icon::after{
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
-
 main h2 ion-icon:hover::after{
     width: 50px;
     height: 50px;
@@ -221,4 +220,91 @@ main .box{
     padding: 26px;
     border-radius: 5px;
     margin-top: 50px;
+}
+
+#lateral{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease;
+}
+
+#lateral.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+#lateral .container{
+    width: 350px;
+    height: 100%;
+    overflow: auto;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all 200ms ease;
+    transition-delay: 200ms;
+    padding: 16px;
+}
+
+#lateral.active .container{
+    right: 0;
+}
+
+#lateral h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#lateral h3 ion-icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+#lateral h3 ion-icon:hover{
+    background-color: #DEDEDE;
+}
+
+#lateral label{
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#lateral input,
+#lateral select{
+    width: 100%;
+    height: 46px;
+    border: 2px solid #DEDEDE;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+}
+
+#lateral button{
+    width: 100%;
+    height: 46px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #1e96fc;
+    color: #FFFFFF;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+#lateral button:hover{
+    background-color: #103c62;
 }
